@@ -97,7 +97,7 @@ angular.module('listings').controller('ListingsController', ['$scope', '$locatio
 
       Listing.update(id, listing)
              .then(function(response) {
-               $state.go('listing.list', { successMessage: 'Listing succesfully updated!' });
+               $state.go('listings.list', { successMessage: 'Listing succesfully updated!' });
              }, function(error) {
                $scope.error = 'Unable to update listing!\n' + error;
              })
@@ -113,7 +113,7 @@ angular.module('listings').controller('ListingsController', ['$scope', '$locatio
 
       Listing.delete(id)
              .then(function(response) {
-               $state.go('listing.list', {successMessage: 'Listing succesfully deleted!' });
+               $state.go('listings.list', {successMessage: 'Listing succesfully deleted!' });
              }, function(error) {
                $scope.error = 'Unable to delete listing!\n' + error;
              });
